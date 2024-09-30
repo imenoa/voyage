@@ -1,0 +1,322 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, black, white);
+  height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+
+header {
+    display: flex;
+    background-color: rgba(78, 77, 77, 0);
+    list-style-type: none;
+    justify-content: space-between;
+    font-family: "Italiana", sans-serif;
+    height: 10%;
+   
+}
+
+.logoavion {
+    width: 100px;
+}
+
+.logoavion img {
+    width: 100%;
+    border-radius: 45%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 100%;
+    padding-top: 3%;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.icon img {
+    width: 30px;
+}
+
+.barnav {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.barnav a:hover {
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.derouleur a:hover {
+    color: black;
+    background-color: rgba(104, 118, 128, 0.5);
+    border-radius: 30%;
+    padding: 10px;
+    margin: 0px;
+    transition: 0.3s ease;
+}
+
+.derouleur {
+    list-style-type: none;
+    background-color: rgba(85, 96, 104, 0.5);
+    border-radius: 20%;
+    display: none;
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+}
+
+.derouleur li {
+    padding: 10px
+}
+
+.barnav>.icon:hover .derouleur {
+    display: block;
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.668);
+}
+
+.st {
+    font-family: "Italiana", sans-serif;
+    margin-left : 12%;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-style: italic;  
+}
+
+.sst {
+    font-family: "Italiana", sans-serif;
+    margin-left : 10%;
+    font-size: 20px;
+    color:  white;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 3px;
+
+}
+
+.ssst {
+    font-family: "Italiana", sans-serif;
+    margin-left: 15%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+   
+}
+
+
+.country {
+    display: flex;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    gap: 50px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    background-color: rgba(8, 8, 8, 0.985);
+    overflow: hidden;
+   
+}
+
+.country img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.3s ease;
+
+}
+
+.country img:hover {
+    transform: scale(1.2);
+
+}
+
+.country a:hover {
+    color: white;
+    opacity: 1;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.test {
+    position: relative;
+    z-index: 0;
+}
+
+.test a {
+    position: absolute;
+    background-color: black;
+    top: 90%;
+    bottom: auto;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0, 3s ease;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    transition: 0.1s ease;
+
+}
+.test a:hover {
+    transform: scale(1.1);
+
+}
+
+.medium {
+    background-color: rgba(8, 8, 8, 0.322);
+    margin-top: 30px;
+    color: beige;
+    font-family: "Italiana", sans-serif;
+    text-align: right;
+    position: relative;
+    flex-wrap: nowrap;
+    
+} 
+
+.medium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/3.jpg); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 10%;
+    padding-top: 0;
+}
+.medium h1{
+    font-size: 60px;
+}
+.colomne{
+    display: flex;
+   
+}
+   
+.caroussel {
+    display: flex;
+    background-color: rgba(8, 8, 8, 0.952);
+    padding: 1%;
+    max-width: 100%;
+    max-height: 500px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.caroussel img {
+    width: 20%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+    animation: scroll 10s linear infinite;
+    animation-direction: alternate;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+
+}
+
+.carrousel :hover img {
+    transform: scale(1.2);
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.colomne-caroussel {
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(8, 8, 8, 0.952);
+    padding: 1%;
+    max-width: 500px;
+    max-height: 500px; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.colomne-caroussel img {
+    width: 300px; 
+    height: 250px; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+    animation: defilementBasHaut 10s linear infinite;
+    animation-direction: alternate;
+    transition: transform 0.5s ease; 
+    opacity: 0.9;
+    
+}
+
+.colomne-caroussel:hover img {
+    transform: scale(1.2); 
+}
+
+@keyframes defilementBasHaut {
+    0% {
+        transform: translateY(100%); 
+    }
+    100% {
+        transform: translateY(-100%); 
+    }
+}
+.colomne{
+    justify-content: space-between;
+    padding-right: 3%;
+}
+.contact{ 
+    border-right: solid rgba(0, 0, 0, 0.411);
+    margin: 1%;
+    padding: 2%;
+}
+.contact h1{
+    font-size: 18px;
+}
+.footer{
+    display: flex;
+    margin: 0%;
+    padding: 5%;
+    padding-top: 0;
+    background-color: rgba(0, 0, 0, 0.959);
+    color: rgba(245, 245, 220, 0.699);
+    justify-content: space-around;
+    border-bottom: solid rgba(192, 183, 183, 0.411);
+    align-items: center;
+}    
+.footer a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(231, 230, 230, 0.452);
+}
+.footer article{
+    border-left: solid rgba(192, 183, 183, 0.411);
+    margin: 1%;
+    padding: 0.5%;
+}
